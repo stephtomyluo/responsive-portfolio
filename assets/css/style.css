@@ -1,0 +1,264 @@
+
+/* Nav Bar  */
+nav {
+  border-bottom: 1px solid #cccccc;
+  text-align: right;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color:#ffffff;
+  z-index: 5;
+}
+
+nav ul {
+  margin: 0;
+}
+/* Horizontal vs. Vertical  */
+nav li {
+  display: inline;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+nav a {
+  padding: 15px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.25em;
+}
+/* Hover Color  */
+nav a:hover {
+  background-color: #4aaaa5;
+}
+/* Page Headings  */
+h2 {
+  color: #4aaaa5;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+h3 {
+  color: #777777;
+}
+
+.paragraph {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #777777;
+  line-height: 20px;
+}
+/* Name  */
+#bio-name {
+  float: left;
+  color: white;
+  font-weight: bold;
+  font-size: 1.50em;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #4aaaa5;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+#bio-image {
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 20px;
+  float: left;
+}
+/* Shakes the image  */
+#bio-image:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+footer {
+  background-color: #666666;
+  border-top: 8px solid #4aaaa5;
+  text-align: center;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.box {
+  width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+  border-color: #dddddd;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #ffffff;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+/* Portfolio  */
+.top {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 250px;
+  width: 250px;
+}
+
+.grid-image {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+}
+
+.grid-title {
+  position: relative;
+  text-align: center;
+  top: 150px;
+  color: white;
+  background-color: #4aaaa5;
+  height: 40px;
+  line-height: 40px;
+}
+
+body {
+  background-image: url(../images/email-pattern.png); 
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+#submit {
+  background-color: #4aaaa5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #b5525c;
+}
+ 
+/* Media Query Sizing */
+
+@media screen and (max-width: 980px) {
+  .box {
+    width: 60%;
+    margin-top: 90px;
+    margin-left: 30px;
+  }
+
+  .top {
+    height: 210px;
+    width: 210px;
+  }
+  
+  .grid-image {
+    height: 210px;
+    width: 210px;
+  }
+  
+  .grid-title {
+    top: 125px;
+    font-size: 20px;
+  }
+  }
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 85%;
+  }
+
+  .top {
+    height: 280px;
+    width: 280px;
+  }
+  
+  .grid-image {
+    height: 280px;
+    width: 280px;
+  }
+  
+  .grid-title {
+    top: 175px;
+  }
+  }
+
+/* Because box touches nav */
+@media screen and (max-width: 700px) {
+  li {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  } 
+
+  .box {
+    margin-top: 120px;
+  }
+
+  nav ul {
+    padding-left: 0px;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .box {
+    margin-top: 120px;
+  }
+
+  li {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .top {
+    height: 375px;
+    width: 375px;
+  }
+  
+  .grid-image {
+    height: 375px;
+    width: 375px;
+  }
+  
+  .grid-title {
+    top: 275px;
+  }
+
+  #bio-image {
+    height: 400px;
+    float: none;
+    margin-left: 80px;
+  }
+
+  nav ul {
+    padding-left: 0px;
+    text-align: center;
+  }
+  }
+
+  
